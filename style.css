@@ -48,7 +48,8 @@ h1 {
     font-size: 16px;
 }
 
-.task_text.checked {
+/* .task_text */
+.checked {
     text-decoration: line-through;
     color: #888;
 }

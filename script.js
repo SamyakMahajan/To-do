@@ -40,10 +40,16 @@ function saveTasks() {
     var tasks = [];
 
     // Extract task text and checked status
+    console.log("saving")
     taskList.querySelectorAll("li").forEach(function(taskItem) {
         var taskText = taskItem.querySelector(".task_text").textContent;
-        var isChecked = taskItem.classList.contains("checked");
-        tasks.push({ text: taskText, checked: isChecked });
+        var isChecked = taskItem.children[0].classList.contains("checked");
+
+        // if(isChecked==false)
+            // {
+                console.log(taskText,":",isChecked);tasks.push({ text: taskText, checked: isChecked });
+                console.log(taskItem.children[0].classList)
+                // }
     });
 
     // Save tasks to local storage as JSON
@@ -63,7 +69,7 @@ function loadTasks() {
             newTask.innerHTML = '<div class="task_text"><input type="checkbox" onclick="toggleTask(this)">' + task.text + '</div><span class="delete" onclick="deleteTask(this)">X</span>';
 
             if (task.checked) {
-                newTask.classList.add("checked");
+                newTask.children[0].classList.add("checked");
             }
 
             taskList.appendChild(newTask);

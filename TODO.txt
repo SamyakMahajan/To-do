@@ -1,0 +1,6 @@
+TODO FOR To-do .txt
+
+A.Be able to change the order of tasks by dragging
+1.Rough list for planning
+2.Sketchpad to think about stuff
+3.Add Date
